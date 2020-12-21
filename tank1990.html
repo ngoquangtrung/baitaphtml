@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTank 1990</title>
+  <script src="cal.js"></script>
+</head>
+
+<body>
+  <div style="width: 190px; height: 190px; border: 1px solid black;" id="battleFiled">
+    <div
+      style="width: 19px; height: 19px; background-image: url('tank.png');background-size: 100% 100%;position: relative;top: 0px;left: 0px; bottom: 171px;right: 171px;"
+      id="tank">      
+    </div>
+  </div>
+  
+  <table>
+    <tr>
+      <td></td>
+      <td>
+        <button onclick="moveUp()">⬆</button>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="moveLeft()">⬅</button></td>
+      <td></td>
+      <td>
+        <button onclick="moveRight()">➡</button></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button onclick="moveDown()">⬇</button></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+<script>
+    
+    function moveUp()
+    {
+        let tren=parseInt(document.getElementById("tank").style.top)-19;
+        if(tren>=0)
+        {
+        document.getElementById("tank").style.top=tren+"px";
+        }
+    }
+    function moveLeft()
+    {
+        let trai=parseInt(document.getElementById("tank").style.left)-19;
+        if(trai>=0)
+        {
+        document.getElementById("tank").style.left=trai+"px";
+        }
+    }
+    function moveRight()
+    {
+        
+        let trai=parseInt(document.getElementById("tank").style.left)+19;
+        if(trai<=171)
+        {
+        document.getElementById("tank").style.left=trai+"px";
+        }
+    }
+    function moveDown()
+    {
+        let tren=parseInt(document.getElementById("tank").style.top)+19;
+        if(tren<=171)
+        {
+        document.getElementById("tank").style.top=tren+"px";
+        }
+    }
+</script>
+
+</html>
