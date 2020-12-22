@@ -40,6 +40,9 @@
   </table>
 </body>
 <script>
+    let len=true;
+    let xuong=false;
+    let qua_trai=false;
     
     function moveUp()
     {
@@ -47,7 +50,11 @@
         if(tren>=0)
         {
         document.getElementById("tank").style.top=tren+"px";
-        }
+        } 
+        if(len==false&&xuong==false&&qua_trai==true)
+        {
+          document.getElementById("tank").style.transform.rolate(90)
+        }       
     }
     function moveLeft()
     {
@@ -55,6 +62,9 @@
         if(trai>=0)
         {
         document.getElementById("tank").style.left=trai+"px";
+        //qua_trai=true;
+        //len=false;
+        //xuong=false;
         }
     }
     function moveRight()
@@ -65,6 +75,10 @@
         {
         document.getElementById("tank").style.left=trai+"px";
         }
+        if(len==true&&xuong==false&&qua_trai==false)
+        {
+          document.getElementById("tank").rolate(90)
+        } 
     }
     function moveDown()
     {

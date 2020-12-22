@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Convert Money</title>
+</head>
+<body>
+<form>
+    <label>Amount</label>
+    <input input type="number" id="sotien">
+    <label>From Currency</label>
+    <select id="tien1">
+        <option>Vietnam</option>
+        <option>USD</option>        
+        <option>EURO</option>
+        <option>YEN</option>
+    </select>
+    <label>To Currency</label>
+    <select id="tien2">
+        <option>Vietnam</option>
+        <option>USD</option>        
+        <option>EURO</option>
+        <option>YEN</option>
+    </select> <br>
+    <button type="button" onclick="convert()">Convert</button><br>
+    Result: <span id="ketqua"></span>
+</form>
+</body>
+<script>
+    let us=23010;
+    let eu=27570;
+    let yen=216;
+    function convert()
+    {
+        let sotien=document.getElementById("sotien").value;
+        let tien1=document.getElementById("tien1").value;
+        let tien2=document.getElementById("tien2").value;
+        console.log(tien1);
+        console.log(tien2);
+        console.log(sotien);
+        if(tien1==tien2)
+        document.getElementById("ketqua").innerHTML=sotien;
+        if(tien1=="USD"&&tien2=="Vietnam")
+        document.getElementById("ketqua").innerHTML=us*sotien;
+        if(tien1=="EURO"&&tien2=="Vietnam")
+        document.getElementById("ketqua").innerHTML= eu*sotien;
+        if(tien1=="YEN"&&tien2=="Vietnam")
+        document.getElementById("ketqua").innerHTML= yen*sotien;
+        if(tien2=="USD"&&tien1=="Vietnam")
+        document.getElementById("ketqua").innerHTML=sotien/us;
+        if(tien2=="EURO"&&tien1=="Vietnam")
+        document.getElementById("ketqua").innerHTML= sotien/us;
+        if(tien2=="YEN"&&tien1=="Vietnam")
+        document.getElementById("ketqua").innerHTML= sotien/yen;
+        if(tien1=="USD"&&tien2=="EURO")
+        document.getElementById("ketqua").innerHTML=us*sotien/eu;
+        if(tien1=="USD"&&tien2=="YEN")
+        document.getElementById("ketqua").innerHTML= us*sotien/yen;
+        if(tien2=="USD"&&tien1=="EURO")
+        document.getElementById("ketqua").innerHTML=eu*sotien/us;
+        if(tien2=="USD"&&tien1=="YEN")
+        document.getElementById("ketqua").innerHTML= yen*sotien/us;
+        if(tien1=="YEN"&&tien2=="EURO")
+        document.getElementById("ketqua").innerHTML=yen*sotien/eu;
+        if(tien2=="YEN"&&tien1=="EURO")
+        document.getElementById("ketqua").innerHTML=yen*sotien/us;     
+    }
+</script>
+</html> 
