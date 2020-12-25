@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra thong tin</title>
+</head>
+<body>
+    <h1>Kiểm tra tổng lớn hơn hoặc bé hơn 4</h1>
+    <form>
+    <label>Nhập số thứ nhất</label>
+    <input iput type="number" id="a">
+    <label>Nhập số thứ hai</label>
+    <input iput type="number" id="b">
+    <button type="button" onclick="kiemtra()" >Kiểm tra</button>
+    </form>
+    <h1>Nhập vào một giá trị chuỗi</h1>
+    <form>
+        <label>Thông tin đăng nhập</label>
+        <input input type="text" id="mes">
+        <button type="button" onclick="login()">Login</button>
+    </form>
+</body>
+<script>
+    function kiemtra()
+    {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        console.log(a+b)
+        if((a+b)<4)
+        {
+            alert("Below")
+        }
+        else if((a+b)>4)
+        {
+            alert("Over")
+        }else
+        {
+            alert("Is 4")
+        }
+
+    }
+    function login()
+    {
+        let mes=document.getElementById("mes").value;
+        console.log(mes)
+        if(mes==="Employee")
+        {alert("Hello");}
+        else if(mes==="Director")
+        {alert("Greetings");}
+        else
+        {alert("No login");}
+    }
+</script>
+</html>
