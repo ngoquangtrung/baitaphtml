@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So nguyen to</title>
+</head>
+<body>
+</body>
+<script>
+    let n=Number(prompt("Nhập số lượng số nguyên tố cần in:"))
+    let count=0;
+        for(let i=0;count<=n;i++)
+        {
+            let check=0;
+            for(let j=1;j<=i;j++)
+            {
+                if(i%j===0)
+                {
+                    check++;
+                }
+            }
+            if(check<=2)
+            {
+                count++;
+                document.write(i+"<br>");
+            }
+        }
+</script>
+</html>
