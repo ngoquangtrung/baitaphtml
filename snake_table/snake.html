@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <table id="game_screen"></table>  
+    <button type="button" onclick="turn_up(); render_screen()">lên</button>
+    
+    <button type="button" onclick="turn_down();render_screen()">xuống</button>
+    
+    <button type="button" onclick="turn_left();render_screen()">trái</button>
+    
+    <button type="button" onclick="turn_right();render_screen()">phải</button>
+    <script src="script.js"></script>
+    <script>
+        render_screen();
+    </script>
+</body>
+</html>
